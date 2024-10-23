@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>Latex 使用以及模版 | Colofulu</title>
+    <meta name="author" content="Colofulu" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/head.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>COLOFULU</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/book">
+            <i class="fa-solid fa-book fa-fw"></i>
+            <span>&ensp;Book</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;COLOFULU</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/book">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-book fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Book</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>Latex 使用以及模版</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/7
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/Latex/" style="color: #00bcd4">
+                    Latex
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>这里存放的是我的 overleaf 模版。</p>
+<span id="more"></span>
+
+<h2 id="1-设置编译器"><a href="#1-设置编译器" class="headerlink" title="1. 设置编译器"></a>1. 设置编译器</h2><p>设置为 XeLatex 主题，导入图片。</p>
+<h2 id="2-模版"><a href="#2-模版" class="headerlink" title="2. 模版"></a>2. 模版</h2><p>模版内容如下。</p>
+<pre><code class="Latex">\documentclass&#123;article&#125;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \tiny：最小的字体大小。
+% \scriptsize：比 \tiny 大一点，用于显示脚注或者表格中的文字。
+% \footnotesize：比 \scriptsize 大一点，用于显示正文中的脚注。
+% \small：比 \footnotesize 大一点，用于显示正文中较小的文字。
+% \normalsize：默认的正文字体大小。
+% \large：比 \normalsize 大一点。
+% \Large：比 \large 大一点。
+% \LARGE：比 \Large 大一点。
+% \huge：比 \LARGE 大一点。
+% \Huge：最大的字体大小。
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% package
+\usepackage&#123;graphicx&#125; % Required for inserting images
+\usepackage&#123;xeCJK&#125;
+\usepackage[hidelinks]&#123;hyperref&#125;
+\usepackage&#123;caption&#125;
+\usepackage&#123;setspace&#125; % section 缩进
+\usepackage&#123;changepage&#125; % 局部缩进
+\setstretch&#123;1.5&#125; % 调整正文行距
+\usepackage&#123;amsmath&#125; % 数学公式
+\usepackage&#123;textcomp&#125; % 圆圈数字①
+\usepackage&#123;multirow&#125; % 表格划线
+\usepackage&#123;svg&#125; % 插入svg图像
+\usepackage&#123;pdfpages&#125; % 插入pdf
+\usepackage[T1]&#123;fontenc&#125; % 使用T1字体编码
+\usepackage[utf8]&#123;inputenc&#125; % 使用UTF-8编码
+\usepackage&#123;enumitem&#125;
+\usepackage&#123;csquotes&#125; % csquotes宏包，用于处理引号
+\usepackage&#123;algorithm&#125; % 算法宏包，伪代码
+\usepackage&#123;algorithmic&#125;
+% 设置西文双引号和单引号的字体
+\renewcommand&#123;\mkblockquote&#125;[4]&#123;
+    \textquotedblleft#1\textquotedblright#2\textquoteleft#3\textquoteright#4
+&#125;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 设置页面布局，调整边距
+\usepackage&#123;geometry&#125;
+\geometry&#123;
+    a4paper,
+    left=2cm,
+    right=2cm,
+    top=3cm,
+    bottom=3cm,
+&#125;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 设置代码框样式
+\usepackage&#123;listings&#125;
+\usepackage&#123;xcolor&#125;
+
+\definecolor&#123;lightgray&#125;&#123;gray&#125;&#123;0.95&#125;
+% 设置代码框的样式
+% BASH
+\lstdefinestyle&#123;bash&#125;&#123;
+    backgroundcolor=\color&#123;lightgray&#125;,
+    basicstyle=\ttfamily,
+    breaklines=true,
+    captionpos=b,
+    frame=single,
+    numbers=left,
+    numbersep=5pt,
+    numberstyle=\tiny\color&#123;gray&#125;,
+    showstringspaces=false,
+    tabsize=2
+&#125;
+% Python
+\lstdefinestyle&#123;pycharm&#125;&#123;
+    backgroundcolor=\color&#123;lightgray&#125;,
+    basicstyle=\ttfamily,
+    breaklines=true,
+    captionpos=b,
+    basicstyle=\footnotesize\ttfamily\color&#123;black&#125;,
+    rulecolor=\color&#123;black&#125;,
+    numbers=left,
+    numbersep=5pt,
+    numberstyle=\tiny\color&#123;gray&#125;,
+    showstringspaces=false,
+    tabsize=2
+&#125;
+% 定义 C 语言风格
+\lstdefinestyle&#123;customc&#125;&#123;
+  backgroundcolor=\color&#123;lightgray&#125;,
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily\color&#123;black&#125;,
+  keywordstyle=\bfseries\color&#123;green!40!black&#125;,
+  commentstyle=\itshape\color&#123;purple!40!black&#125;,
+  identifierstyle=\color&#123;blue&#125;,
+  stringstyle=\color&#123;orange&#125;,
+&#125;
+% 定义 IDEA 样式
+\lstdefinestyle&#123;IDEA&#125;&#123;
+    backgroundcolor=\color&#123;white&#125;,
+    basicstyle=\small\ttfamily,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    commentstyle=\color&#123;green!40!black&#125;,
+    frame=single,
+    keywordstyle=\color&#123;blue&#125;,
+    language=Java,
+    numbers=left,
+    numbersep=5pt,
+    numberstyle=\tiny\color&#123;gray&#125;,
+    rulecolor=\color&#123;black&#125;,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    stringstyle=\color&#123;red&#125;,
+    tabsize=4
+&#125;
+\captionsetup[lstlisting]&#123;position=bottom&#125;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 目录首行
+\renewcommand&#123;\contentsname&#125;&#123;目录&#125;
+% section编号
+\usepackage&#123;zhnumber&#125; % change section number to chinese
+\renewcommand\thesection&#123;\zhnum&#123;section&#125;&#125;
+\renewcommand\thesubsection&#123;\hspace&#123;1em&#125;\arabic&#123;subsection&#125;.&#125;
+\renewcommand\thesubsubsection&#123;\hspace&#123;2em&#125;\Roman&#123;subsubsection&#125;&#125;
+\newcommand&#123;\Uproman&#125;[1]&#123;\MakeUppercase&#123;\romannumeral#1&#125;&#125;
+% 设置目录中显示到第2级section
+\setcounter&#123;tocdepth&#125;&#123;2&#125; % 目录
+% \setcounter&#123;secnumdepth&#125;&#123;2&#125; % 正文
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% title
+\title&#123;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *可在前面无空行时，避免自动排版
+\vspace*&#123;2\baselineskip&#125;
+\begin&#123;figure&#125;[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]&#123;logo.png&#125;
+\end&#123;figure&#125;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*&#123;2\baselineskip&#125;
+\huge
+课程名称
+\Large
+
+\vspace*&#123;1\baselineskip&#125;
+实验/作业项目题目
+\vspace*&#123;1\baselineskip&#125;
+\begin&#123;table&#125;[!ht]
+    \centering
+    \large
+    \begin&#123;tabular&#125;&#123;lll&#125;
+        \hline
+        \multicolumn&#123;1&#125;&#123;c&#125;&#123;姓名&#125; &amp; \multicolumn&#123;1&#125;&#123;c&#125;&#123;学号&#125; &amp;  \\ \hline
+        高洋洋 &amp; 21312049 \\ \hline   
+    \end&#123;tabular&#125;
+\end&#123;table&#125;
+&#125;
+\date&#123;日期&#125;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% 正文
+\begin&#123;document&#125;
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+\setlength&#123;\parindent&#125;&#123;2em&#125; 
+\setlength&#123;\parskip&#125;&#123;0.5em&#125; 
+
+\section&#123;实验项目&#125;
+\section&#123;实验要求&#125;
+\begin&#123;enumerate&#125;[label=&#123;\arabic*.&#125;, left=2em]
+    \item 实验要求一
+\end&#123;enumerate&#125;
+\section&#123;实验内容&#125;
+\subsection&#123;实验内容一&#125;
+
+\section&#123;实验过程&#125;
+\section&#123;实验分析&#125;
+\section&#123;实验总结&#125;
+\end&#123;document&#125;
+</code></pre>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2024 Colofulu
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Colofulu
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+<!-- Background Effect -->
+<canvas id="particle-background"></canvas>
+<script>
+    !function () {
+        function n(n, e, t) {
+            return n.getAttribute(e) || t
+        }
+
+        function e(n) {
+            return document.getElementsByTagName(n)
+        }
+
+        function t() {
+            var t = e("script"), o = t.length, i = t[o - 1];
+            return {l: o, z: n(i, "zIndex", -1), o: n(i, "opacity", .5), c: n(i, "color", "0,0,0"), n: n(i, "count", 99)}
+        }
+
+        function o() {
+            a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+        }
+
+        function i() {
+            r.clearRect(0, 0, a, c);
+            var n, e, t, o, m, l;
+            s.forEach(function (i, x) {
+                for (i.x += i.xa, i.y += i.ya, i.xa *= i.x > a || i.x < 0 ? -1 : 1, i.ya *= i.y > c || i.y < 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1, 1), e = x + 1; e < u.length; e++) n = u[e], null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l = o * o + m * m, l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o, i.y -= .03 * m), t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t / 2, r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")", r.moveTo(i.x, i.y), r.lineTo(n.x, n.y), r.stroke()))
+            }), x(i)
+        }
+
+        var a, c, u, m = document.createElement("canvas"), d = t(), l = "c_n" + d.l, r = m.getContext("2d"),
+            x = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (n) {
+                window.setTimeout(n, 1e3 / 45)
+            }, w = Math.random, y = {x: null, y: null, max: 2e4};
+        m.id = l, m.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z + ";opacity:" + d.o, e("body")[0].appendChild(m), o(), window.onresize = o, window.onmousemove = function (n) {
+            n = n || window.event, y.x = n.clientX, y.y = n.clientY
+        }, window.onmouseout = function () {
+            y.x = null, y.y = null
+        };
+        for (var s = [], f = 0; d.n > f; f++) {
+            var h = w() * a, g = w() * c, v = 2 * w() - 1, p = 2 * w() - 1;
+            s.push({x: h, y: g, xa: v, ya: p, max: 6e3})
+        }
+        u = s.concat([y]), setTimeout(function () {
+            i()
+        }, 100)
+    }();
+</script>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+    <script src="/js/fireworks.min.js"></script>
+    <script>
+        clickEffect(); // 调用特效函数
+    </script>
+
+</body>
+</html>
