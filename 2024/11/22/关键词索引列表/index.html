@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Hexo 博客搭建教程 II | Colofulu</title>
+    <title>关键词索引列表 | Colofulu</title>
     <meta name="author" content="Colofulu" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -170,76 +170,119 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>Hexo 博客搭建教程 II</h1>
+        <h1>关键词索引列表</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2024/9/6
+            2024/11/22
         </span>
         
-        <span class="category">
-            <a href="/categories/%E6%95%99%E7%A8%8B/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                教程
-            </a>
-        </span>
-        
-        
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
-            </span>
-            
-            
-            <span class="tag">
-                
-                <a href="/tags/Hexo/" style="color: #00bcd4">
-                    Hexo
-                </a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/%E4%B8%BB%E9%A2%98/" style="color: #00a596">
-                    主题
-                </a>
-            </span>
-            
-        </span>
         
     </div>
     
     <div class="content" v-pre>
-        <p>接上文： Hexo 博客搭建教程 I。</p>
+        <p>这是看的文章的一些关键词记录</p>
 <span id="more"></span>
-<h2 id="1-安装主题"><a href="#1-安装主题" class="headerlink" title="1. 安装主题"></a>1. 安装主题</h2><p>首先在<a target="_blank" rel="noopener" href="https://hexo.io/themes/">这里</a>选择一个主题。</p>
-<p>上面的图片是预览页，点击标题就可以到达对应主题的 Github 项目页。</p>
-<p>选择心仪的主题之后进行安装，在博客网站根目录下运行下面的命令将主题 Clone 到本地。</p>
-<pre><code class="bash">cd themes
-git clone &lt;link&gt;.git &lt;theme&gt; --depth=1
-// --depth=1 是为了 Clone 更快，只 Clone 最新提交。
-</code></pre>
-<p>我选择的主题是 ParticleX，如果你也喜欢这个主题，那么你只需要执行如下命令即可。</p>
-<pre><code class="bash">git clone https://github.com/theme-particlex/hexo-theme-particlex.git particlex --depth=1
-</code></pre>
-<p>安装完成后，在博客根目录下的 _config.yml 中设置 theme 参数为该主题名称，就能够实现主题的切换，一般主题在 Github 项目页下都有介绍和配置说明，可以按照说明自定义页面。</p>
-<h2 id="2-创建特殊页面"><a href="#2-创建特殊页面" class="headerlink" title="2. 创建特殊页面"></a>2. 创建特殊页面</h2><h3 id="2-1-分类页"><a href="#2-1-分类页" class="headerlink" title="2.1 分类页"></a>2.1 分类页</h3><p>执行如下命令，创建分类页面。</p>
-<pre><code class="bash">hexo new page categories
-</code></pre>
-<p>打开 source&#x2F;categories&#x2F;index.md，在 --- 括起来的地方添加 type : categories。</p>
-<h3 id="2-2-标签页"><a href="#2-2-标签页" class="headerlink" title="2.2 标签页"></a>2.2 标签页</h3><pre><code class="bash">hexo new page tags
-</code></pre>
-<p>打开 source&#x2F;tags&#x2F;index.md，在 --- 括起来的地方添加 type : tags。</p>
-<h3 id="2-3-关于页"><a href="#2-3-关于页" class="headerlink" title="2.3 关于页"></a>2.3 关于页</h3><pre><code class="bash">hexo new page about
-</code></pre>
-<p>打开 source&#x2F;about&#x2F;index.md，在下面添加内容即可。</p>
-<h2 id="3-自定义网站配置"><a href="#3-自定义网站配置" class="headerlink" title="3. 自定义网站配置"></a>3. 自定义网站配置</h2><p>网站配置存放在博客根目录下的 _config.yml 文件中。</p>
-<p>具体可以参考官方文档：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">Hexo文档</a></p>
+
+
+<h2 id="1-关键词列表"><a href="#1-关键词列表" class="headerlink" title="1. 关键词列表"></a>1. 关键词列表</h2><h3 id="1-1-RDF"><a href="#1-1-RDF" class="headerlink" title="1.1 RDF"></a>1.1 RDF</h3><p><strong>定义</strong>：<br>RDF（Resource Description Framework）是一种用于描述资源及其关系的标准化模型，由万维网联盟（W3C）提出。它是语义网中数据表示的基础框架。</p>
+<hr>
+<h3 id="1-2-CCS"><a href="#1-2-CCS" class="headerlink" title="1.2 CCS"></a>1.2 CCS</h3><p><strong>定义</strong>：<br>CCS是网络安全领域的重要概念，涉及以下领域：</p>
+<ul>
+<li>信息系统</li>
+<li>数据管理系统</li>
+<li>数据库设计与模型</li>
+<li>基于图的数据库模型</li>
+<li>数据模型扩展</li>
+<li>半结构化数据</li>
+<li>查询语言</li>
+</ul>
+<hr>
+<h3 id="1-3-半结构化数据（Semi-structured-Data）"><a href="#1-3-半结构化数据（Semi-structured-Data）" class="headerlink" title="1.3 半结构化数据（Semi-structured Data）"></a>1.3 半结构化数据（Semi-structured Data）</h3><p><strong>定义</strong>：<br>半结构化数据介于非结构化和结构化数据之间，具有以下特性：</p>
+<ul>
+<li>数据组织性较强，但结构不固定或严格。</li>
+<li>适合存储复杂的关系或嵌套信息。</li>
+</ul>
+<hr>
+<h3 id="1-4-IRI"><a href="#1-4-IRI" class="headerlink" title="1.4 IRI"></a>1.4 IRI</h3><p><strong>定义</strong>：<br>IRI（Internationalized Resource Identifier）是一种为资源提供全局标识符的技术，不暗示其位置或检索方法。</p>
+<ul>
+<li>是URI的泛化。</li>
+<li>可出现在RDF三元组中的任意位置。</li>
+</ul>
+<hr>
+<h3 id="1-5-Literal"><a href="#1-5-Literal" class="headerlink" title="1.5 Literal"></a>1.5 Literal</h3><p><strong>定义</strong>：<br>Literal是IRI的基本字符串值，具有以下特性：</p>
+<ul>
+<li>可与数据类型相关联，确保正确解析和解释。</li>
+<li>仅允许作为RDF三元组的对象。</li>
+</ul>
+<hr>
+<h3 id="1-6-空白节点"><a href="#1-6-空白节点" class="headerlink" title="1.6 空白节点"></a>1.6 空白节点</h3><p><strong>定义</strong>：<br>空白节点用于表示资源，但不使用IRI分配全局标识符。</p>
+<ul>
+<li>是RDF数据集中使用的本地唯一标识符。</li>
+<li>可用作三元组中的主语和宾语。</li>
+</ul>
+<hr>
+<h3 id="1-7-BGP"><a href="#1-7-BGP" class="headerlink" title="1.7 BGP"></a>1.7 BGP</h3><p><strong>定义</strong>：<br>BGP（Basic Graph Pattern，基本图形模式）由一组三元组模式组成，是RDF查询中的重要概念。</p>
+<hr>
+<h2 id="2-关键技术"><a href="#2-关键技术" class="headerlink" title="2. 关键技术"></a>2. 关键技术</h2><h3 id="2-1-RDF"><a href="#2-1-RDF" class="headerlink" title="2.1 RDF"></a>2.1 RDF</h3><p>RDF提供了一种新型的数据模型，能够以半结构化方式描述资源。以下是RDF的主要特性：</p>
+<ul>
+<li><strong>三元组表示</strong>：形式为 <em>(Subject, Predicate, Object)</em> (S, P, O)。<ul>
+<li><strong>S</strong>：主语</li>
+<li><strong>P</strong>：谓词</li>
+<li><strong>O</strong>：对象</li>
+</ul>
+</li>
+<li><strong>数据建模</strong>：<ul>
+<li>三元组集合可以建模为有向图：<ul>
+<li>图的节点表示主语和对象。</li>
+<li>图的边表示谓词。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>应用场景</strong>：无模式信息建模。</li>
+</ul>
+<p>示例图：<br><img src="/images/img.png" alt="RDF三元组图"></p>
+<hr>
+<h3 id="2-2-BGP-查询模式"><a href="#2-2-BGP-查询模式" class="headerlink" title="2.2 BGP 查询模式"></a>2.2 BGP 查询模式</h3><p>BGP 查询被框定为子图模式匹配问题，分为以下类型：</p>
+<ol>
+<li><strong>星型查询</strong><ul>
+<li>包含仅涉及主语-主语连接的模式。</li>
+</ul>
+</li>
+<li><strong>链式查询</strong><ul>
+<li>由主客体连接组成，三重模式像链一样连续连接。</li>
+</ul>
+</li>
+<li><strong>树形查询</strong><ul>
+<li>包括主语-主语连接和主语-客体连接。</li>
+</ul>
+</li>
+<li><strong>循环查询</strong><ul>
+<li>包括主语-主语、主语-客体、客体-客体连接。</li>
+</ul>
+</li>
+<li><strong>复杂查询</strong><ul>
+<li>不同形状的组合形式。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="2-3-集中式BDF系统"><a href="#2-3-集中式BDF系统" class="headerlink" title="2.3 集中式BDF系统"></a>2.3 集中式BDF系统</h3><ol>
+<li><strong>语句表</strong><ul>
+<li>维护RDF三元组的一种简单方法是将三元组语句存储在类似表中的结构中，一般是三元组线性化列表，表中的对象可以是URI、文本、空白节点。谓词一直是URl饮用，主题节点只能是URl或者空白节点</li>
+</ul>
+</li>
+<li><hr>
+</li>
+</ol>
+<h2 id="3-参考文献"><a href="#3-参考文献" class="headerlink" title="3. 参考文献"></a>3. 参考文献</h2><ol>
+<li><em>RDF Data Storage and Query Processing Schemes: A Survey</em></li>
+</ol>
+<hr>
 
     </div>
     

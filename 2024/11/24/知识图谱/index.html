@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Hexo 博客搭建教程 II | Colofulu</title>
+    <title>知识图谱 | Colofulu</title>
     <meta name="author" content="Colofulu" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -170,77 +170,29 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>Hexo 博客搭建教程 II</h1>
+        <h1>知识图谱</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2024/9/6
+            2024/11/24
         </span>
         
-        <span class="category">
-            <a href="/categories/%E6%95%99%E7%A8%8B/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                教程
-            </a>
-        </span>
-        
-        
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
-            </span>
-            
-            
-            <span class="tag">
-                
-                <a href="/tags/Hexo/" style="color: #00bcd4">
-                    Hexo
-                </a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/%E4%B8%BB%E9%A2%98/" style="color: #00a596">
-                    主题
-                </a>
-            </span>
-            
-        </span>
         
     </div>
     
     <div class="content" v-pre>
-        <p>接上文： Hexo 博客搭建教程 I。</p>
+        <p>还未写完</p>
 <span id="more"></span>
-<h2 id="1-安装主题"><a href="#1-安装主题" class="headerlink" title="1. 安装主题"></a>1. 安装主题</h2><p>首先在<a target="_blank" rel="noopener" href="https://hexo.io/themes/">这里</a>选择一个主题。</p>
-<p>上面的图片是预览页，点击标题就可以到达对应主题的 Github 项目页。</p>
-<p>选择心仪的主题之后进行安装，在博客网站根目录下运行下面的命令将主题 Clone 到本地。</p>
-<pre><code class="bash">cd themes
-git clone &lt;link&gt;.git &lt;theme&gt; --depth=1
-// --depth=1 是为了 Clone 更快，只 Clone 最新提交。
-</code></pre>
-<p>我选择的主题是 ParticleX，如果你也喜欢这个主题，那么你只需要执行如下命令即可。</p>
-<pre><code class="bash">git clone https://github.com/theme-particlex/hexo-theme-particlex.git particlex --depth=1
-</code></pre>
-<p>安装完成后，在博客根目录下的 _config.yml 中设置 theme 参数为该主题名称，就能够实现主题的切换，一般主题在 Github 项目页下都有介绍和配置说明，可以按照说明自定义页面。</p>
-<h2 id="2-创建特殊页面"><a href="#2-创建特殊页面" class="headerlink" title="2. 创建特殊页面"></a>2. 创建特殊页面</h2><h3 id="2-1-分类页"><a href="#2-1-分类页" class="headerlink" title="2.1 分类页"></a>2.1 分类页</h3><p>执行如下命令，创建分类页面。</p>
-<pre><code class="bash">hexo new page categories
-</code></pre>
-<p>打开 source&#x2F;categories&#x2F;index.md，在 --- 括起来的地方添加 type : categories。</p>
-<h3 id="2-2-标签页"><a href="#2-2-标签页" class="headerlink" title="2.2 标签页"></a>2.2 标签页</h3><pre><code class="bash">hexo new page tags
-</code></pre>
-<p>打开 source&#x2F;tags&#x2F;index.md，在 --- 括起来的地方添加 type : tags。</p>
-<h3 id="2-3-关于页"><a href="#2-3-关于页" class="headerlink" title="2.3 关于页"></a>2.3 关于页</h3><pre><code class="bash">hexo new page about
-</code></pre>
-<p>打开 source&#x2F;about&#x2F;index.md，在下面添加内容即可。</p>
-<h2 id="3-自定义网站配置"><a href="#3-自定义网站配置" class="headerlink" title="3. 自定义网站配置"></a>3. 自定义网站配置</h2><p>网站配置存放在博客根目录下的 _config.yml 文件中。</p>
-<p>具体可以参考官方文档：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">Hexo文档</a></p>
 
+<h2 id="1-知识图谱概论"><a href="#1-知识图谱概论" class="headerlink" title="1. 知识图谱概论"></a>1. 知识图谱概论</h2><h3 id="1-1-语言与知识"><a href="#1-1-语言与知识" class="headerlink" title="1.1 语言与知识"></a>1.1 语言与知识</h3><ol>
+<li>连接主义：智能的实现应该模拟人脑的生理结构，即用计算机模拟神经网络连接结构</li>
+<li>符号主义：智能的实现应该模拟人类的心智，即用计算机符号记录人脑的记忆，表示人脑中的记忆</li>
+</ol>
+<p>语言+知识：人来通过认识世界积累知识，并通过语言来描述、记录和传承关于世界的知识。同时，准确理解语言也极大依赖大脑中所习得的各种知识。</p>
+<h3 id="1-2-知识图谱的起源"><a href="#1-2-知识图谱的起源" class="headerlink" title="1.2 知识图谱的起源"></a>1.2 知识图谱的起源</h3><h3 id="1-3-知识图谱的价值"><a href="#1-3-知识图谱的价值" class="headerlink" title="1.3 知识图谱的价值"></a>1.3 知识图谱的价值</h3><h3 id="1-4-知识图谱的技术内涵"><a href="#1-4-知识图谱的技术内涵" class="headerlink" title="1.4 知识图谱的技术内涵"></a>1.4 知识图谱的技术内涵</h3>
     </div>
     
     
